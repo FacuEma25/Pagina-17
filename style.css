@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --header-font: "Montserrat";
+    --font-general: "Poppins";
+    --principal: #3eb4d2;
+    --dark: #223658;
+    --menu: #f1fbfd;
+    --botones: #33bbcb;
+    --letra: #31384a;
+    --violeta: #642bff;
+}
+
+/*Auto scrol*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+section[id]{
+    scroll-margin-top: 70px;
+}
+
+body{
+    background-color: white;
+    color: var(--letra);
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Tamaño de contenedor general, cambiar individualmete si lo necesito*/
+
+.container{
+    max-width: 1100px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+.container-2{
+    max-width: 1300px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+/*Menu-Barra*/
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    background-color: var(--menu);
+}
+
+.menu .logo{
+    padding: 0 70px;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--letra);
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: var(--letra);
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: violet;
+}
+
+/*Todo esto es para cuando se despliegue la version de celular*/
+#menu{
+    /*Para q no aparezca el INPUT*/
+    display: none;
+}
+
+.menu-icon{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+/* HEADER */
+header{
+    background-image: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url(img/Portada-fondo.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.tittle-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: left;
+    padding: 0 900px 0 100px;
+}
+
+.text-header h1{
+    padding-right: 250px;
+    padding-bottom: 40px;
+}
+
+.text-header p{
+    padding-right: 250px;
+    padding-bottom: 40px;
+}
+
+.text-header a{
+    background-color: var(--botones);
+    color: var(--menu);
+    padding: 15px;
+    transition: .3s;
+}
+
+.text-header a:hover{
+    background-color: var(--dark);
+}
+
+/* SERVICIOS */
+.services-content{
+    margin: 150px auto;
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 2rem;
+    padding: 0 380px 100px 380px;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.services{
+    border: 1px solid var(--dark);
+    padding: 25px;
+}
+
+.services i{
+    font-size: 70px;
+    color: var(--botones);
+}
+
+.services h2{
+    font-family: var(--font-general);
+    font-size: 1.8rem;
+    padding: 20px 0 0 0;
+}
+
+.services p{
+    font-size: 0.9rem;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+
+.services a{
+    color: var(--letra);
+    border: 2px solid var(--dark);
+    padding: 12px;
+    transition: .3s;
+}
+
+.services a:hover{
+    background-color: var(--botones);
+    color: var(--dark);
+}
+
+.extensor{
+    position: relative;
+    width: 300px;
+    height: 5px;
+}
+
+
+/* INFO */
+.info-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px auto;
+    background-color: var(--menu);
+    /* padding: 35px 0; */
+}
+
+.info-img{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.info-img .img-1{
+    position: relative;
+    width: 250px;
+    left: 310px;
+}
+
+.info-img .img-2{
+    position: relative;
+    width: 250px;
+    bottom: -20px;
+    left: 100px;
+}
+
+.info-img .img-3{
+    position: relative;
+    width: 350px;
+    left: 210px;
+}
+
+.info-img .img-4{
+    position: relative;
+    width: 250px;
+    top: -25px;
+    left: 100px;
+}
+
+.info-tittle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-tittle h2{
+    padding-right: 350px;
+    font-size: 2rem;
+    font-family: var(--header-font);
+    padding-bottom: 45px;
+}
+
+.info-text{
+    display: flex;
+    flex-direction: column;
+    padding-right: 350px;
+    gap: 25px;
+}
+
+.inf-text1 h4{
+    font-size: 1.2rem;
+}
+
+.inf-text1 p{
+    font-size: 0.9rem;
+    padding-left: 24px;
+}
+
+.inf-text1 h4::before{
+    content: '✔';
+    color: var(--botones);
+    padding-right: 5px;
+}
+
+/* OPINION */
+.opinion-content{
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.op-container{
+    background-color: var(--menu);
+    width: 400px;
+    padding-left: 25px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.144);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.op-tittle{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.op-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+.op-tittle img{
+    width: 70px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.op-text h4{
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-family: var(--header-font);
+}
+
+.op-sub h2{
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+.op-sub p{
+    font-size: 0.9rem;
+    padding-bottom: 15px;
+}
+
+.star{
+    color: orange;
+}
+
+.negro{
+    color: black;
+}
+
+
+/* EMPLEADOS */
+.empleados-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.empre-container{
+    background-color: var(--menu);
+    width: 350px;
+    margin: 100px auto;
+    border-radius: 15px;
+    padding-top: 25px;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.151));
+}
+
+.empre-container img{
+    width: 300px;
+    border-radius: 15px;
+}
+
+.empre-container h2{
+    font-family: var(--header-font);
+    font-size: 1.7rem;
+}
+
+.empre-container .sub-dent{
+    color: #96a5c9;
+    padding-bottom: 15px;
+}
+
+.empre-container p{
+    padding: 0 25px 25px 25px;
+}
+.empre-container .redes{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.redes i{
+    background-color: var(--principal);
+    color: var(--menu);
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.redes i:hover{
+    border: 1px solid var(--dark);
+    transform: scale(1.1);
+}
+
+/* CONTACTANOS */
+.contant-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url(img/Contacr.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+.contant-tittle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contant-tittle h2{
+    font-size: 3rem;
+    padding-right: 150px;
+}
+
+.contant-redes{
+    display: flex;
+    gap: 20px;
+}
+
+.contant-redes i{
+    font-size: 30px;
+    background-color: var(--botones);
+    color: var(--menu);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.contant-redes i:hover{
+    background-color: var(--menu);
+    color: var(--botones);
+}
+
+
+
+/* DIV FOOTER */
+/**DIV FOOTER - Info y redes sociales*/
+
+.footer-info{
+    padding: 50px;
+    text-align: center;
+    background-color: var(--menu);
+}
+
+.footer-info1{
+    display: flex;
+    text-align: left;
+    gap: 250px;
+    justify-content: center;
+}
+
+.footer-text p{
+    font-size: 1.1rem;
+}
+
+/*Redes sociales*/
+
+.footer-redes1{
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.footer-redes1 a{
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--letra);
+    color: var(--menu);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+}
+
+.footer-redes1 a:hover{
+    transform: scale(1.2);
+    background-color: var(--menu);
+    color: var(--letra);
+}
+
+/**FOOTER**/
+footer{
+    text-align: center;
+    background-color: var(--letra);
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer a{
+    font-family: var(--menu);
+    text-decoration: none;
+    color: var(--principal);
+}
+
+footer i{
+    margin: 0 auto;
+}
+
+footer p{
+    color: var(--principal);
+    font-size: 1rem;
+}
